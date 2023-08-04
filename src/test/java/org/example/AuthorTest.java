@@ -10,7 +10,7 @@ class AuthorTest {
     @Test
     void email() {
 
-        Author author = new Author("Big", "Fisch");
+        Author author = Author.createAuthor("Big", "Fisch");
 
         assertEquals("Big.Fisch@gmail.com", author.email());
     }
