@@ -31,7 +31,7 @@ public class Author
         this.email = email;
     }
 
-    public static boolean validateEmail(String email)
+    private boolean validateEmail(String email)
     {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
