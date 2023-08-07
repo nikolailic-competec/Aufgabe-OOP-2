@@ -1,17 +1,22 @@
 package org.example;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-class AuthorTest {
+class AuthorTest
+{
 
     @Test
-    void email() {
+    void testValidEmail()
+    {
+        assertTrue(Author.validateEmail("test@example.com"));
+    }
 
-        Author author = Author.createAuthor("Big", "Fisch");
-
-        assertEquals("Big.Fisch@gmail.com", author.email());
+    @Test
+    void testInvalidEmail()
+    {
+        assertFalse(Author.validateEmail("invalid_email"));
     }
 }
