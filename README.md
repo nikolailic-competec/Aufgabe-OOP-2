@@ -1,4 +1,4 @@
-# task-OOP-2
+# Aufgabe-OOP-2
 
 1
 
